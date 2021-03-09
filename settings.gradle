@@ -1,1 +1,10 @@
 rootProject.name = 'illuwa'
+include 'Member'
+include 'Notification'
+include 'Image'
+include 'Review'
+include 'Order'
+include 'Payment'
+include 'Location'
+include 'Store'
+

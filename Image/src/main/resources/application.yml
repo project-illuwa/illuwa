@@ -1,6 +1,6 @@
 spring:
   application:
-    name: image-service
+    name: image
 server:
   port: 809${SEQUENCE_NO}
 eureka:

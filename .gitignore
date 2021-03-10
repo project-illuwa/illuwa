@@ -6,6 +6,7 @@ build/
 !**/src/test/**/build/
 
 ### Illuwa ###
+application-db.yml
 Config/**/application.yml
 
 ### STS ###

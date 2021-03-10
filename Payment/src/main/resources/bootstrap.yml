@@ -1,11 +1,11 @@
 server:
-  port: 8090
+  port: 8140
 spring:
   profiles:
     active: dev
     include: db
   application:
-    name: image
+    name: payment
   cloud:
     config:
       uri: http://localhost:8079

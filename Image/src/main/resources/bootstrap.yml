@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: image
+  cloud:
+    config:
+      uri: http://localhost:8079

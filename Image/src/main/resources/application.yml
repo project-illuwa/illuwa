@@ -1,8 +1,0 @@
-spring:
-  application:
-    name: image
-server:
-  port: 809${SEQUENCE_NO}
-eureka:
-  instance:
-    instance-id: ${spring.application.name}-${SEQUENCE_NO}

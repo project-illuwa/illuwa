@@ -7,4 +7,6 @@ include 'Order'
 include 'Payment'
 include 'Location'
 include 'Store'
+include 'Discovery'
+include 'Config'
 

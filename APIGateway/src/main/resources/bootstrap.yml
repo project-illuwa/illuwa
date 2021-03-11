@@ -3,21 +3,3 @@ server:
 spring:
   application:
     name: gateway
-zuul:
-  routes:
-    image:
-      path: /api/images/**
-    location:
-      path: /api/locations/**
-    member:
-      path: /api/members/**
-    notification:
-      path: /api/notifications/**
-    order:
-      path: /api/orders/**
-    payment:
-      path: /api/payments/**
-    review:
-      path: /api/reviews/**
-    store:
-      path: /api/store/**

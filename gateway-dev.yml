@@ -5,18 +5,18 @@ eureka:
 zuul:
   routes:
     image:
-      path: /api/images/**
+      path: /v1/images/**
     location:
-      path: /api/locations/**
+      path: /v1/locations/**
     member:
-      path: /api/members/**
+      path: /v1/members/**
     notification:
-      path: /api/notifications/**
+      path: /v1/notifications/**
     order:
-      path: /api/orders/**
+      path: /v1/orders/**
     payment:
-      path: /api/payments/**
+      path: /v1/payments/**
     review:
-      path: /api/reviews/**
+      path: /v1/reviews/**
     store:
-      path: /api/store/**
+      path: /v1/store/**

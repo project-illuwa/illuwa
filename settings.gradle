@@ -9,4 +9,5 @@ include 'Location'
 include 'Store'
 include 'Discovery'
 include 'Config'
+include 'APIGateway'
 

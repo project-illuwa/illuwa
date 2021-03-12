@@ -1,9 +1,12 @@
 eureka:
+  profiles: cloud
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
+---
 spring:
+  profiles: db
   datasource:
     url: jdbc:mariadb://localhost:3306/illuwa?characterEncoding=UTF-8&serverTimezone=UTC
     username: root

@@ -3,7 +3,7 @@ server:
 spring:
   profiles:
     active: dev
-    include: db
+    include: db, pw, cloud
   application:
     name: payment
   cloud:

@@ -2,6 +2,6 @@ server:
   port: 8761
 spring:
   profiles:
-    active: dev
+    active: cloud, dev
   application:
     name: eureka

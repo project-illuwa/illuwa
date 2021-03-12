@@ -2,6 +2,10 @@ server:
   port: 8761
 spring:
   profiles:
-    active: cloud, dev
+    active: cloud
   application:
     name: eureka
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

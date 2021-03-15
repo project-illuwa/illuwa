@@ -21,3 +21,11 @@ logging:
   level:
     org.hibernate.SQL: debug
     org.hibernate.type: trace
+
+---
+spring:
+  profiles: oauth2
+oauth2:
+  client_id: illuwa
+  client_pw: illuwa_client_pw
+  token_uri: http://localhost:8110/oauth/check_token

@@ -3,7 +3,7 @@ server:
 spring:
   profiles:
     active: dev
-    include: db, pw, cloud
+    include: db, pw, cloud, oauth2
   application:
     name: notification
   cloud:

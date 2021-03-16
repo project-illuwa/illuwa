@@ -24,11 +24,12 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     private final MemberService memberService;
     private final AuthenticationManager authenticationManager;
     private final OAuth2Configuration oAuth2Configuration;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) {
         security
-                .passwordEncoder(this.passwordEncoder())
+                .passwordEncoder(this.passwordEncoder)
                 .tokenKeyAccess("permitAll()")
                 .checkTokenAccess("isAuthenticated()")
                 .allowFormAuthenticationForClients();
@@ -64,10 +65,5 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
         JwtAccessTokenConverter jwtAccessTokenConverter = new JwtAccessTokenConverter();
         jwtAccessTokenConverter.setSigningKey(this.oAuth2Configuration.getJwt_secret());
         return jwtAccessTokenConverter;
-    }
-
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 }

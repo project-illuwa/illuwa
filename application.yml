@@ -2,7 +2,7 @@ eureka:
   profiles: cloud
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka/eureka/
 
 ---
 spring:

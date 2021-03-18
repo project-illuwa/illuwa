@@ -5,7 +5,10 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class NotificationSendResponse {
+public class NotificationResponse {
 
+    private long id;
+    private String title;
+    private String sender;
     private String receiver;
 }

@@ -24,7 +24,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
     private final LoadBalancerClient loadBalancerClient;
 
     @Override
-    public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
+    public void configure(ResourceServerSecurityConfigurer resources) {
         resources
                 .tokenServices(this.remoteTokenServices())
                 .accessDeniedHandler(new OAuth2AccessDeniedHandler());
@@ -43,7 +43,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
     }
 
     @Bean
-    public RemoteTokenServices remoteTokenServices() throws Exception {
+    public RemoteTokenServices remoteTokenServices() {
         String[] token = this.oAuth2Configuration.getToken_uri().replace("http://", "").split("/");
         RemoteTokenServices remoteTokenServices = new RemoteTokenServices();
         remoteTokenServices.setCheckTokenEndpointUrl(Optional.of(this.loadBalancerClient.choose(token[0]).getUri().toString()).orElseThrow(() -> new InvalidValueException(token[0] + " 서비스가 중지된 상태입니다. 유레카 서버를 확인해주세요")));

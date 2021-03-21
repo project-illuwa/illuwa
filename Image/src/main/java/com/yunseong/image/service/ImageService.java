@@ -16,13 +16,13 @@ public class ImageService {
 
     private final Resource resource = new DefaultResourceLoader().getResource("file:D:/Springboot/[20201007]Third_Project/board/src/main/resources/images/");
 
-    public void save(long id, MultipartFile[] files) {
+    public void save(String owner, MultipartFile[] files) {
         if(files != null && files.length > 0) {
             try {
                 Path path = this.resource.getFile().toPath();
-                Files.createDirectory(path.resolve(String.valueOf(id)));
+                Files.createDirectory(path.resolve(String.valueOf(owner)));
                 for (MultipartFile file : files)
-                    Files.copy(file.getInputStream(), path.resolve(id + "/" + file.getOriginalFilename()));
+                    Files.copy(file.getInputStream(), path.resolve(owner + "/" + file.getOriginalFilename()));
             } catch (IOException e) {
                 e.printStackTrace();
             }
